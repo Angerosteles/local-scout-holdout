@@ -44,7 +44,8 @@ def detect(text, setting):
         clean, index = privacy._normalise_for_detection(text) if hasattr(privacy, '_normalise_for_detection') else (text, None)
         found = privacy.local_spans(clean, names=True, **SETTINGS[setting])
         if index is not None:
-            found = [(index[s], index[e - 1] + 1, c) for s, e, c in found if e > s]
+            ends = getattr(index, 'ends', None)   # 1.9+: an entity like &amp; maps back to its full source span
+            found = [(index[s], ends[e - 1] if ends is not None else index[e - 1] + 1, c) for s, e, c in found if e > s]
         return found
 
 
