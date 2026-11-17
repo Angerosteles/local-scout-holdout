@@ -21,6 +21,7 @@ A frozen, synthetic evaluation set for the local masking in [Local Scout](https:
 | `LABELLING.md` | Span rules for every category |
 | `scripts/holdout_pomiar.py` | Scoring script (`pomiar` = measurement) |
 | `scripts/holdout_tabela.py` | Prints summary tables from the scoring output (`tabela` = table) |
+| `results/results-1.9.0.json` | Scoring output for Local Scout 1.9.0 (`cc05bcf`; this set was used to tune 1.9, so these are development numbers) |
 | `results/results-1.8.0.json` | Scoring output for Local Scout 1.8.0 (`5f95fb9`) |
 | `results/results-1.7.5.json` | Scoring output for Local Scout 1.7.5 (`c07b215`) |
 
